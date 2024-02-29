@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/GitHubExplore/static/css/main.ea87dbab.css",
+    "main.js": "/GitHubExplore/static/js/main.19926c4e.js",
+    "static/media/spinner.gif": "/GitHubExplore/static/media/spinner.e2ffacc949faa6aeba7c.gif",
+    "index.html": "/GitHubExplore/index.html",
+    "main.ea87dbab.css.map": "/GitHubExplore/static/css/main.ea87dbab.css.map",
+    "main.19926c4e.js.map": "/GitHubExplore/static/js/main.19926c4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea87dbab.css",
+    "static/js/main.19926c4e.js"
+  ]
+}
