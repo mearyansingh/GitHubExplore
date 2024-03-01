@@ -6,10 +6,10 @@ function RepoList({ repos }) {
 	return (
 		<>
 			{/* <!-- Timeline --> */}
-			<h2 className='mt-5 my-4 font-bold text-center'>
+			<h2 className='mt-5 mb-0 pt-4 font-bold text-center'>
 				Latest Repositories
 			</h2>
-			<section className="bsb-timeline-4 bg-light py-3 py-md-5 mb-5">
+			<section className="bsb-timeline-4 py-3 py-md-5 mb-5">
 				<div className="container">
 					<div className="row justify-content-center">
 						<div className="col-10 col-md-12 col-xl-10 col-xxl-9">

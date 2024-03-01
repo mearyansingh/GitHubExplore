@@ -52,6 +52,7 @@ function About() {
 									role="button"
 									target='_blank'
 									rel="noreferrer"
+									aria-label="Github"
 								>
 									<i className="bi bi-github"></i>
 								</a>
@@ -63,6 +64,7 @@ function About() {
 									role="button"
 									target='_blank'
 									rel="noreferrer"
+									aria-label="Linkedin"
 								>
 									<i className="bi bi-linkedin"></i>
 								</a>
@@ -74,6 +76,7 @@ function About() {
 									target='_blank'
 									rel="noreferrer"
 									role="button"
+									aria-label="twitter"
 								>
 									<i className="bi bi-twitter-x"></i>
 								</a>
@@ -85,6 +88,7 @@ function About() {
 									role="button"
 									target='_blank'
 									rel="noreferrer"
+									aria-label="Instagram"
 								>
 									<i className="bi bi-instagram"></i>
 								</a>

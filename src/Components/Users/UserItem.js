@@ -11,7 +11,7 @@ function UserItem({ user: { login, avatar_url } }) {
 				<Card.Body className=''>
 					<h2 className='card-title'>{login}</h2>
 					<Link
-						className='text-decoration-none icon-link icon-link-hover'
+						className='text-decoration-none icon-link icon-link-hover lh-1'
 						to={`/user/${login}`}
 					>
 						Visit Profile

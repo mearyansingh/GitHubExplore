@@ -1,6 +1,7 @@
 // import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 import { useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import CountUp from 'react-countup';
 import Spinner from '../Components/Layout/Loader'
 import RepoList from '../Components/Repos/RepoList'
 import GithubContext from '../Context/Github/GithubContext'
@@ -8,10 +9,13 @@ import { getUserAndRepos } from '../Context/Github/GithubActions'
 import { Badge, Button, Card, Col, Container, Image, Row } from 'react-bootstrap'
 
 function User() {
+
+	/**Context hook */
 	const { user, loading, repos, dispatch } = useContext(GithubContext)
 
 	const params = useParams()
 
+	/**Lifecycle method */
 	useEffect(() => {
 		dispatch({ type: 'SET_LOADING' })
 		const getUserData = async () => {
@@ -80,7 +84,7 @@ function User() {
 							<Card className='border-0 rounded-start-0 h-100'>
 								<Card.Body>
 									<div className='d-flex align-items-center gap-1'>
-										<h1 className='card-title'>
+										<h1>
 											{name}
 										</h1>
 										<Badge bg="success">{type}</Badge>
@@ -97,7 +101,7 @@ function User() {
 														<i className="bi bi-geo-fill"></i>
 													</div>
 													<div className='flex-grow-1 text-break'>
-														<h6 className="m-0">Location</h6>
+														<span className="d-block lh-1 fw-semibold">Location</span>
 														<p className="text-secondary m-0 fs-7">{location}</p>
 													</div>
 												</div>
@@ -110,7 +114,7 @@ function User() {
 														<i className="bi bi-link-45deg"></i>
 													</div>
 													<div className='flex-grow-1 text-break'>
-														<h6 className="m-0">Website</h6>
+														<span className="d-block lh-1 fw-semibold">Website</span>
 														<a className='text-decoration-none' href={websiteUrl} target='_blank' rel='noreferrer'>
 															{websiteUrl}
 														</a>
@@ -125,7 +129,7 @@ function User() {
 														<i className="bi bi-twitter-x"></i>
 													</div>
 													<div className='flex-grow-1 text-break'>
-														<h6 className="m-0">Twitter</h6>
+														<span className="d-block lh-1 fw-semibold">Twitter</span>
 														<a
 															href={`https://twitter.com/${twitter_username}`}
 															target='_blank'
@@ -145,7 +149,7 @@ function User() {
 														<i className="bi bi-envelope-at"></i>
 													</div>
 													<div className='flex-grow-1 text-break'>
-														<h6 className="m-0">Email</h6>
+														<span className="d-block lh-1 fw-semibold">Email</span>
 														<a href="mailto:" className="fs-7 text-decoration-none">{email}</a>
 													</div>
 												</div>
@@ -160,7 +164,7 @@ function User() {
 														<div className="d-flex align-items-center justify-content-center bg-dark-subtle mb-3 mx-auto stats-circle">
 															<i className="bi bi-people-fill fs-5"></i>
 														</div>
-														<h5 className="display-6 fw-bold m-1">{followers}</h5>
+														<CountUp className="display-6 fw-bold m-1" delay={0.9} end={followers} />
 														<p className="text-secondary m-0">Followers</p>
 													</div>
 												</Col>
@@ -169,7 +173,7 @@ function User() {
 														<div className="d-flex align-items-center justify-content-center bg-dark-subtle mb-3 mx-auto stats-circle">
 															<i className="bi bi-people-fill fs-5"></i>
 														</div>
-														<h5 className="display-6 fw-bold m-1">{following}</h5>
+														<CountUp className="display-6 fw-bold m-1" delay={0.9} end={following} />
 														<p className="text-secondary m-0">Following</p>
 													</div>
 												</Col>
@@ -178,7 +182,8 @@ function User() {
 														<div className="d-flex align-items-center justify-content-center bg-dark-subtle mb-3 mx-auto stats-circle">
 															<i className="bi bi-file-earmark-code-fill fs-5"></i>
 														</div>
-														<h5 className="display-6 fw-bold m-1">{public_repos}</h5>
+														{/* <span className="display-6 fw-bold m-1">{public_repos}</span> */}
+														<CountUp className="display-6 fw-bold m-1" delay={0.9} end={public_repos} />
 														<p className="text-secondary m-0">Public Repos</p>
 													</div>
 												</Col>
@@ -187,7 +192,7 @@ function User() {
 														<div className="d-flex align-items-center justify-content-center bg-dark-subtle mb-3 mx-auto stats-circle">
 															<i className="bi bi-shop-window fs-5"></i>
 														</div>
-														<h5 className="display-6 fw-bold m-1">{public_gists}</h5>
+														<CountUp className="display-6 fw-bold m-1" delay={0.9} end={public_gists} />
 														<p className="text-secondary m-0">Public Gists</p>
 													</div>
 												</Col>
