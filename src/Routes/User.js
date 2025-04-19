@@ -1,4 +1,3 @@
-// import { FaCodepen, FaStore, FaUserFriends, FaUsers } from 'react-icons/fa'
 import { useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import CountUp from 'react-countup';

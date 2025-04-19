@@ -82,18 +82,17 @@ function About() {
 								</a>
 								{/* <!-- Instagram --> */}
 								<a
-									className="btn text-white m-1"
+									className="btn h-100 text-white m-1"
 									style={{ backgroundColor: "#d62976" }}
 									href="https://www.instagram.com/aryansingh.me/"
 									role="button"
 									target='_blank'
 									rel="noreferrer"
 									aria-label="Instagram"
+								// style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
 								>
 									<i className="bi bi-instagram"></i>
 								</a>
-
-
 							</div>
 						</div>
 						<div className="col-12 order-md-0 col-md-4 col-xxl-4">

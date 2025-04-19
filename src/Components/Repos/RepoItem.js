@@ -36,7 +36,7 @@ function RepoItem({ repo, align }) {
 										<i className='bi bi-arrow-right ms-1'></i>
 									</a>
 								</div>
-								<span className="card-subtitle fs-7 fw-semibold  text-secondary">Branch: {default_branch}</span>
+								<span className="card-subtitle fs-7 fw-semibold text-secondary">Branch: {default_branch}</span>
 								<p className="card-text mb-0">{description}</p>
 								{homepage && <span className="card-subtitle text-secondary mb-2 fs-7 ">Deployed version: <a href={homepage} className='text-decoration-none'>{homepage}</a></span>}
 								<div className='mt-2 d-grid d-sm-flex gap-2 flex-wrap'>

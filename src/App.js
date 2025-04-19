@@ -3,10 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import Footer from './Components/Layout/Footer'
 import Header from './Components/Layout/Header'
-// import Home from './Routes/Home'
-// import About from './Routes/About'
-// import User from './Routes/User'
-// import NotFound from './Routes/NotFound'
 import { GithubProvider } from './Context/Github/GithubContext'
 import Loader from './Components/Layout/Loader';
 
